@@ -18,14 +18,19 @@ export const ToDoItems = (props) => {
     }
   };
 
-  const toggleStatus = () => {
-    context.setLineThrough(!context.lineThrough);
+  const toggleStatus = (id) => {
+    let allItems = [...context.toDos];
+    let copyItem = context.toDos.find((item) => item.id === id);
+    copyItem.status = !copyItem.status;
+    let index = allItems.indexOf(copyItem);
+    allItems.splice(index, 1, copyItem);
+    context.setTodos(allItems);
   };
 
   return (
     <div
       onDoubleClick={() => props.deleteItem(props.id)}
-      onClick={toggleStatus}
+      onClick={() => toggleStatus(props.id)}
       style={{
         backgroundColor: changeColor(),
         borderRadius: "10px",
@@ -35,7 +40,7 @@ export const ToDoItems = (props) => {
       <li
         className="toDos"
         style={{
-          textDecoration: context.lineThrough ? "line-through" : "none",
+          textDecoration: props.status ? "line-through" : "none",
         }}
       >
         {props.text}

@@ -36,6 +36,7 @@ export const ToDoApp = () => {
               key={index}
               id={item.id}
               deleteItem={deleteItem}
+              status={item.status}
             />
           );
         })}
