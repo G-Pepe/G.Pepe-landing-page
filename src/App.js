@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Container from "./Container";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Row, Col } from "react-bootstrap";
+import { ToDoApp } from "./ToDoApp";
+import { WeatherApp } from "./WeatherApp";
+import "./App.css";
+import { Googlebar } from "./Googlebar";
+import torre from "./torre.jpg";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Container>
+      <Row>
+        <Col
+          style={{
+            width: "50%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            /* height: "70vh", */
+            backgroundColor: "rgb(185, 211, 192)",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <WeatherApp />
+        </Col>
+        <Col
+          xs={5}
+          style={{
+            backgroundImage: `url(${torre}) `,
+            backgroundSize: "cover",
+            height: "100vh",
+          }}
+        >
+          <Googlebar />
+        </Col>
+        <Col style={{ backgroundColor: "rgb(185, 211, 192)" }}>
+          <ToDoApp></ToDoApp>
+        </Col>
+      </Row>
+    </Container>
   );
-}
+};
 
 export default App;
