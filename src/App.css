@@ -16,7 +16,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
     height: 2.5rem;
-    margin: 10px
+    margin: 10px;
+    max-width: 400px;
+    line-height: 0.8rem;
 }
 
 
