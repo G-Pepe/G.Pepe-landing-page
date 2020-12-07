@@ -29,12 +29,12 @@ export const ToDoItems = (props) => {
 
   return (
     <div
+      className="toDosList"
       onDoubleClick={() => props.deleteItem(props.id)}
       onClick={() => toggleStatus(props.id)}
       style={{
         backgroundColor: changeColor(),
         borderRadius: "10px",
-        width: "60%",
       }}
     >
       <li

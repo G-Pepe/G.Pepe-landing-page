@@ -50,7 +50,7 @@ export const ColorsExplanation = () => {
           height: "25px",
         }}
       >
-        High Priority - from 10
+        High priority - from 10
       </p>
     </div>
   );

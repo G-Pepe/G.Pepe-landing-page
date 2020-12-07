@@ -7,8 +7,24 @@
     margin: 10px;
     border-radius: 20px;
     font-family: 'Josefin Sans', sans-serif;
+
     
 }
+
+.toDosList {
+    white-space: nowrap;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 2.5rem;
+    margin: 10px
+}
+
+
+
+.toDosList:hover {
+    overflow: visible;
+  }
+
 
 .number {
     width: 2rem;
