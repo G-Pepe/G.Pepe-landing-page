@@ -25,7 +25,7 @@ export const WeatherApp = () => {
 
   const fetchData = (city) => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=49faaaf71aa2bc4591136c69962d3bc1&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid={API_KEY}&units=metric`
     ).then((res) =>
       res.json().then((result) => {
         setWeather(result);
