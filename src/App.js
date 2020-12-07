@@ -19,7 +19,7 @@ const App = () => {
             alignItems: "center",
             justifyContent: "center",
             /* height: "70vh", */
-            backgroundColor: "yellow",
+            backgroundColor: "rgb(185, 211, 192)",
           }}
         >
           <WeatherApp />
