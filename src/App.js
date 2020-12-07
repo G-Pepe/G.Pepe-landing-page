@@ -29,7 +29,7 @@ const App = () => {
           style={{
             backgroundImage: `url(${torre}) `,
             backgroundSize: "cover",
-            height: "100vh",
+            //height: "100vh",
           }}
         >
           <Googlebar />
