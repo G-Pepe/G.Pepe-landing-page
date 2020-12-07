@@ -13,7 +13,7 @@ export const Googlebar = () => {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: "4rem", marginBottom: "4rem" }}>
       <form action="" onSubmit={search} className="searchForm">
         <img src={google} alt="logo" className="googleLogo" />
         <input

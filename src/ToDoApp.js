@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AddToDos } from "./AddToDos";
+import { ColorsExplanation } from "./ColorsExplanation";
 import { MyContext } from "./Contextfile";
 import { ToDoItems } from "./ToDoItems";
 
@@ -41,6 +42,7 @@ export const ToDoApp = () => {
           );
         })}
       </ul>
+      <ColorsExplanation />
     </div>
   );
 };
